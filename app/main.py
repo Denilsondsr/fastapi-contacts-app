@@ -1,7 +1,8 @@
 
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
-from . import models, database
+import models, database
+# APAGAR O FROM . DA LINHA DE CIMA (NOTION)
 
 models.Base.metadata.create_all(bind=database.engine)
 
